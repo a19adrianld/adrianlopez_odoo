@@ -23,9 +23,10 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
+        'security/ir.model.access.csv',
+        'views/adriodoo.xml',
         'views/templates.xml',
+        'views/menu.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
