@@ -1,0 +1,105 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="adrianlopez_odoo.list">
+      <field name="name">adrianlopezOdoo list</field>
+      <field name="model">adrianlopez_odoo.adrianlopez_odoo</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="adriodoo_list_action">
+      <field name="name">adrianlopezOdoo window</field>
+      <field name="res_model">adrianlopez_odoo.adriodoo</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">Tes que crear o primeiro rexistro</p>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="adriodoo_form_view">
+      <field name="name">adriodoo.form</field>
+      <field name="model">adrianlopez_odoo.adriodoo</field>
+      <field name="arch" type="xml">
+        <form string="Formulario Adri Odoo">
+          <sheet>
+            <group>
+              <field name="name"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.filters" id="filtro 1 ">
+      <field name="name">Filtro informacion 1</field>
+      <field name="model_id">adrianlopez_odoo.adriodoo</field>
+      <field name="context">{'group_by': ['autorizado']}</field>
+      <field name="is_default">true</field>
+      <field name="active">true</field>
+      <field name="sort">[]</field>
+      <field name="domain">[]</field><!-- Aquí iría o filtro -->
+      <field name="user_id"></field><!-- En blanco para que esté dispoñible para todos os usuarios -->
+      <field name="action_id" eval="ref('adrianlopez_odoo.adriodoo_list_action')"/><!-- Obtemos o id a partir do id externo-->
+    </record>
+
+
+
+    <record model="ir.filters" id="filtro 2 ">
+      <field name="name">Filtro informacion 2</field>
+      <field name="model_id">adrianlopez_odoo.adriodoo</field>
+      <field name="context">{'group_by': ['autorizado']}</field>
+      <field name="is_default">false</field>
+      <field name="active">true</field>
+      <field name="sort">[]</field>
+      <field name="domain">['|','&amp;',('autorizado', '=', False),('sexo_traducido', '=', 'Mujer'),('name', '=','Rexistro 3' )]</field><!-- Aquí iría o filtro -->
+      <field name="user_id"></field><!-- En blanco para que esté dispoñible para todos os usuarios -->
+      <field name="action_id" eval="ref('adrianlopez_odoo.adriodoo_list_action')"/><!-- Obtemos o id a partir do id externo-->
+    </record>
+
+
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="adrianlopez_odoo.action_server">
+      <field name="name">adrianlopezOdoo server</field>
+      <field name="model_id" ref="model_adrianlopez_odoo_adrianlopez_odoo"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="adrianlopezOdoo" id="adrianlopez_odoo.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="adrianlopez_odoo.menu_1" parent="adrianlopez_odoo.menu_root"/>
+    <menuitem name="Menu 2" id="adrianlopez_odoo.menu_2" parent="adrianlopez_odoo.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="adrianlopez_odoo.menu_1_list" parent="adrianlopez_odoo.menu_1"
+              action="adrianlopez_odoo.action_window"/>
+    <menuitem name="Server to list" id="adrianlopez_odoo" parent="adrianlopez_odoo.menu_2"
+              action="adrianlopez_odoo.action_server"/>
+-->
+  </data>
+</odoo>

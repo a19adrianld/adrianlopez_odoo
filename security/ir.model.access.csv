@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_adrianlopez_odoo_adrianlopez_odoo,adrianlopez_odoo.adrianlopez_odoo,model_adrianlopez_odoo_adrianlopez_odoo,base.group_user,1,1,1,1
+adrianlopez_odoo_adriodoo,adrianlopez_odoo.adriodoo,model_adrianlopez_odoo_adriodoo,base.group_user,1,1,1,1
