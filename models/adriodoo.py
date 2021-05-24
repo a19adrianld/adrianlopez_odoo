@@ -9,7 +9,7 @@ class adriodoo(models.Model):
 
     name = fields.Char(string="Hola mundo")
 
-    autorizado = fields.Boolean(string="¿Autorizado?", default=True)
+    autorizado = fields.Boolean(string="¿Autorizado?")
 #     value = fields.Integer()
 #     value2 = fields.Float(compute="_value_pc", store=True)
 #     description = fields.Text()

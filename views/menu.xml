@@ -1,6 +1,6 @@
 <odoo>
     <data>
-        <menuitem id="main_adrianlopez_odoo" name="Manú nivel 0, Adrian Lopez Odoo"/>
-        <menuitem id="menu_adriodoo" name="Manú nivel 1. Adrian Odoo" parent="main_adrianlopez_odoo" action="adriodoo_list_action"/>
+        <menuitem id="main_adrianlopez_odoo" name="Menú nivel 0, Adrian Lopez Odoo"/>
+        <menuitem id="menu_adriodoo" name="Menú nivel 1. Adrian Odoo" parent="main_adrianlopez_odoo" action="adriodoo_list_action"/>
     </data>
 </odoo>
