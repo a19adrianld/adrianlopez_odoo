@@ -26,32 +26,49 @@
       </field>
     </record>
 
-    <record model="ir.ui.view" id="adriodoo_form_view">
-      <field name="name">adriodoo.form</field>
+<!--    <record model="ir.ui.view" id="adriodoo_form_view">-->
+<!--      <field name="name">adriodoo.form</field>-->
+<!--      <field name="model">adrianlopez_odoo.adriodoo</field>-->
+<!--      <field name="arch" type="xml">-->
+<!--        <form string="Formulario Adri Odoo">-->
+<!--          <sheet>-->
+<!--            <group>-->
+<!--              <field name="name"/>-->
+<!--              <field name="autorizado"/>-->
+<!--            </group>-->
+<!--          </sheet>-->
+<!--        </form>-->
+<!--      </field>-->
+<!--    </record>-->
+
+
+
+    <record model="ir.ui.view" id="suceso_tree_view">
+      <field name="name">adriodoo.tree</field>
       <field name="model">adrianlopez_odoo.adriodoo</field>
       <field name="arch" type="xml">
-        <form string="Formulario Adri Odoo">
-          <sheet>
-            <group>
-              <field name="name"/>
-              <field name="autorizado"/>
-            </group>
-          </sheet>
-        </form>
+        <tree string="adriodoo Tree" editable ="top" decoration-success="nivel == 'Baixo'" decoration-warning="nivel == 'Medio'" decoration-danger="nivel == 'Alto'">
+          <field name="name"/>
+          <field name="descripcion"/>
+          <field name="nivel"/>
+          <field name="data_hora"/>
+        </tree>
       </field>
     </record>
 
-    <record model="ir.filters" id="filtro 1 ">
-      <field name="name">Filtro informacion 1</field>
-      <field name="model_id">adrianlopez_odoo.adriodoo</field>
-      <field name="context">{'group_by': ['autorizado']}</field>
-      <field name="is_default">true</field>
-      <field name="active">true</field>
-      <field name="sort">[]</field>
-      <field name="domain">[]</field><!-- Aquí iría o filtro -->
-      <field name="user_id"></field><!-- En blanco para que esté dispoñible para todos os usuarios -->
-      <field name="action_id" eval="ref('adrianlopez_odoo.adriodoo_list_action')"/><!-- Obtemos o id a partir do id externo-->
-    </record>
+
+
+<!--    <record model="ir.filters" id="filtro 1 ">-->
+<!--      <field name="name">Filtro informacion 1</field>-->
+<!--      <field name="model_id">adrianlopez_odoo.adriodoo</field>-->
+<!--      <field name="context">{'group_by': ['autorizado']}</field>-->
+<!--      <field name="is_default">true</field>-->
+<!--      <field name="active">true</field>-->
+<!--      <field name="sort">[]</field>-->
+<!--      <field name="domain">[]</field>&lt;!&ndash; Aquí iría o filtro &ndash;&gt;-->
+<!--      <field name="user_id"></field>&lt;!&ndash; En blanco para que esté dispoñible para todos os usuarios &ndash;&gt;-->
+<!--      <field name="action_id" eval="ref('adrianlopez_odoo.adriodoo_list_action')"/>&lt;!&ndash; Obtemos o id a partir do id externo&ndash;&gt;-->
+<!--    </record>-->
 
 
 
